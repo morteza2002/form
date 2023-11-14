@@ -55,18 +55,37 @@
           />
         </div>
         <div class="mb-3">
-            <label for="selectGender" class="form-label">تعیین جنسیت:</label>
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="جنسیت" aria-label="جنسیت" readonly>
-                <button class="btn btn-outline-secondary" type="button" onclick="setGender('مرد')">مرد</button>
-                <button class="btn btn-outline-secondary" type="button" onclick="setGender('زن')">زن</button>
-            </div>
-            <input type="hidden" id="genderInput" name="genderInput">
+          <label for="selectGender" class="form-label">تعیین جنسیت:</label>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="جنسیت"
+              aria-label="جنسیت"
+              readonly
+            />
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              onclick="setGender('مرد')"
+            >
+              مرد
+            </button>
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              onclick="setGender('زن')"
+            >
+              زن
+            </button>
+          </div>
+          <input type="hidden" id="genderInput" name="genderInput" />
         </div>
 
         <div class="mb-3">
           <label for="selectProvince" class="form-label">انتخاب استان:</label>
           <select class="form-select" id="selectProvince" name="selectProvince">
+            <option value="کرمان">کرمان</option>
             <option value="البرز">البرز</option>
             <option value="اردبیل">اردبیل</option>
             <option value="آذربایجان شرقی">آذربایجان شرقی</option>
@@ -82,7 +101,7 @@
             <option value="هرمزگان">هرمزگان</option>
             <option value="ایلام">ایلام</option>
             <option value="اصفهان">اصفهان</option>
-            <option value="کرمان">کرمان</option>
+
             <option value="کرمانشاه">کرمانشاه</option>
             <option value="خوزستان">خوزستان</option>
             <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
@@ -98,7 +117,6 @@
             <option value="تهران">تهران</option>
             <option value="یزد">یزد</option>
             <option value="زنجان">زنجان</option>
-            
           </select>
         </div>
 
