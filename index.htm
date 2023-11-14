@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فرم ورود کاربر</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style src="style.css"></style>
+  </head>
+  <body class="bg-info text-end">
+    <div class="container-fluid bg-light p-5 mt-5">
+      <h2 class="mb-4">فرم ورود کاربر</h2>
+
+      <form>
+        <div class="mb-3">
+          <label for="inputFullName" class="form-label"
+            >نام و نام خانوادگی:</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="inputFullName"
+            name="inputFullName"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="inputPhoneNumber" class="form-label">شماره تلفن:</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="inputPhoneNumber"
+            name="inputPhoneNumber"
+            pattern="[0-9]{11}"
+            placeholder="لطفاً یازده رقم عددی وارد کنید"
+            required
+            dir="rtl"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="inputEmail" class="form-label">ایمیل:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            name="inputEmail"
+            placeholder="example@gmail.com"
+            required
+          />
+        </div>
+        <div class="mb-3">
+            <label for="selectGender" class="form-label">تعیین جنسیت:</label>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="جنسیت" aria-label="جنسیت" readonly>
+                <button class="btn btn-outline-secondary" type="button" onclick="setGender('مرد')">مرد</button>
+                <button class="btn btn-outline-secondary" type="button" onclick="setGender('زن')">زن</button>
+            </div>
+            <input type="hidden" id="genderInput" name="genderInput">
+        </div>
+
+        <div class="mb-3">
+          <label for="selectProvince" class="form-label">انتخاب استان:</label>
+          <select class="form-select" id="selectProvince" name="selectProvince">
+            <option value="البرز">البرز</option>
+            <option value="اردبیل">اردبیل</option>
+            <option value="آذربایجان شرقی">آذربایجان شرقی</option>
+            <option value="آذربایجان غربی">آذربایجان غربی</option>
+            <option value="بوشهر">بوشهر</option>
+            <option value="چهارمحال و بختیاری">چهارمحال و بختیاری</option>
+            <option value="فارس">فارس</option>
+            <option value="قزوین">قزوین</option>
+            <option value="قم">قم</option>
+            <option value="گیلان">گیلان</option>
+            <option value="گلستان">گلستان</option>
+            <option value="همدان">همدان</option>
+            <option value="هرمزگان">هرمزگان</option>
+            <option value="ایلام">ایلام</option>
+            <option value="اصفهان">اصفهان</option>
+            <option value="کرمان">کرمان</option>
+            <option value="کرمانشاه">کرمانشاه</option>
+            <option value="خوزستان">خوزستان</option>
+            <option value="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</option>
+            <option value="کردستان">کردستان</option>
+            <option value="لرستان">لرستان</option>
+            <option value="مرکزی">مرکزی</option>
+            <option value="مازندران">مازندران</option>
+            <option value="خراسان شمالی">خراسان شمالی</option>
+            <option value="خراسان رضوی">خراسان رضوی</option>
+            <option value="خراسان جنوبی">خراسان جنوبی</option>
+            <option value="سمنان">سمنان</option>
+            <option value="سیستان و بلوچستان">سیستان و بلوچستان</option>
+            <option value="تهران">تهران</option>
+            <option value="یزد">یزد</option>
+            <option value="زنجان">زنجان</option>
+            
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="selectEducationLevel" class="form-label"
+            >مقطع تحصیلی:</label
+          >
+          <select
+            class="form-select"
+            id="selectEducationLevel"
+            name="selectEducationLevel"
+          >
+            <option value="دیپلم">دیپلم</option>
+            <option value="کاردانی ">کاردانی</option>
+            <option value="کارشناسی">کارشناسی</option>
+            <option value="کارشناسی ارشد">کارشناسی ارشد</option>
+            <option value="دکترا">دکترا</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">ارسال فرم</button>
+      </form>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.7.6/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.js"></script>
+
+    <script src="pdf-script.js"></script>
+  </body>
+</html>
